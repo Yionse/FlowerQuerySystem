@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理界面</title>
+    <link rel="icon" href="images/bitbug_favicon.ico">
+    <!-- 引入css样式 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/user.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="css/backstage.css">
+</head>
+
+<body>
+    <div class="continar">
+        <ul class="left">
+            <li><a href="javascript:;" class="current" data-index="1">用户管理</a></li>
+            <li><a href="login.html" class="bay">退出登录</a></li>
+        </ul>
+        <div class="right  infor right-current">
+            <h1>用户管理</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>用户名</td>
+                        <td>密码</td>
+                        <td>手机号</td>
+                        <td>收货地址</td>
+                        <td>操作</td>
+                    </tr>
+                </thead>
+                <tbody class="user-infor">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/html" id="shop">
+        <tr>
+            <td><img src="{{f_src}}" alt=""></td>
+            <td><span class="title">{{f_title}}</span></td>
+            <td><span class="price">{{price}}元</span></td>
+            <td><a href="javascript:;"id="{{c_id}}" class="iconfont">&#xeafb;删除</a></td>
+        </tr>
+    </script>
+    <script type="text/html" id="user">
+        <tr>
+            <td>{{u_username}}</td>
+            <td><input type="text" value="{{u_pass}}" class="pass"></td>
+            <td>{{u_tel}}</td>
+            <td>{{u_address}}</td>
+            <td><a href="javascript:;" id="{{u_id}}" class="iconfont">&#xeafb;删除</a></td>
+        </tr>
+    </script>
+    <script src="js/template-web.js"></script>
+    <script src="jQuery/JQuery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/backstage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,495 @@
+//  定义整个网站的核心颜色
+@main_color : #ff4419;
+
+body {
+    background-color: #f5f5f5;
+}
+
+/*
+    关键代码
+    当文本的长度，超过盒子的最大宽度时，需要显示省略号
+    使用与所有的Html元素
+*/
+.omit() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+//  整个页面的版心
+.w() {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+// 设置一些默认样式
+button {
+    outline: none!important;
+}
+a:hover {
+    text-decoration:  none;
+}
+
+//  header
+.site-header {
+    width: 100%;
+    height: 100px;
+    border-bottom: 5px solid #ccc;
+    .continar {
+        width: 1226px;
+        height: 100px;
+        margin: 0 auto;
+        >a {
+            display: block;
+            width: 250px;
+            height: 80px;
+            float: left;
+            margin-top: 10px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .row {
+            height: 100px;
+            width: 700px;
+            float: left;
+            margin: 0;
+            padding-left: 30px;
+            .input-group .form-control:first-child {
+                height: 60px;
+                width: 450px;
+                border-radius: 50px 0 0 50px;
+                margin-top: 20px;
+                padding-left: 30px;
+                border-color: @main_color;
+            }
+            .input-group-btn:last-child>.btn {
+                height: 60px;
+                margin-top: 20px;
+                width: 120px;
+                border-radius: 0 50px 50px 0;
+                transition: background-color .3s;
+                font-size: 18px;
+                border-color: @main_color;
+                &:hover {
+                    background-color: @main_color;
+                    color: white;
+                }
+            }
+        }
+        .log,
+        .success {
+            position: relative;
+            float: left;
+            height: 100px;
+            width: 276px;
+            line-height: 100px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .log a{
+            padding: 10px 20px;
+            color: black;
+            transition: border-bottom .3s;
+            &:hover {
+                border-bottom: 3px solid @main_color;
+                color: @main_color;
+            }
+        }
+        .success {
+            p, a {
+                float: left;
+            }
+            .quit {
+                display: none;
+                width: 150px;
+                position: absolute;
+                background-color: white;
+                bottom: -67px;
+                border: 1px solid #ccc;
+                a {
+                    text-decoration: none;
+                    display: block;
+                    line-height: 30px;
+                    width: 100%;
+                    padding: 0 20px;
+                    border-bottom: 1px solid white;
+                    &:hover {
+                        border-bottom: 1px solid black;
+                    }
+                }
+            }
+            .username {
+                position: relative;
+                height: 95px;
+                width: 150px;
+                color: @main_color;
+                //  调用将过长文本显示为省略号
+                .omit();
+                padding: 0 10px;
+                transition: ackground-color .3s;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 10px;
+                    top: 45px;
+                    width: 0;
+                    border: 7px solid white;
+                    border-color:  transparent @main_color transparent transparent;
+                    transition: all .3s;
+                }
+                &:hover {
+                    background-color: @main_color;
+                    color: white;
+                    &::after {
+                        border-color:  transparent white transparent transparent;
+                        transform: rotate(-90deg);
+                        top: 50px;
+                    }
+                }
+                .fs {
+                    font-size: 26px;
+                }
+            }
+            a.car {
+                height: 95px;
+                width: 126px;
+                margin: 0;
+                background-color: rgba(0,0,0, .3);
+                text-align: center;
+                padding-left: 2px;
+                color: black;
+                transition: background-color .3s;
+                .icontfont {
+                    font-size: 22px!important;
+                }
+                .fs {
+                    font-size: 26px;
+                }
+                &:hover {
+                    background-color: @main_color;
+                    color: white;
+                }
+                
+            }
+        }
+    }
+}
+//  end
+
+// nav
+.site-nav {
+    width: 100%;
+    height: 50px;
+    background-color: @main_color;
+    // margin-top: 20px;
+    .nav{
+        .w();
+        height: 50px;
+        &>li {
+            float: left;
+            &.more:hover .slide-nav{
+                display: block;
+            }
+            &.more>a::after {
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 18px;
+                width: 0;
+                border: 7px solid white;
+                border-color:  transparent white transparent transparent;
+                transition: all .3s;
+            }
+            a {
+                position: relative;
+                display: block;
+                padding: 0 40px;
+                height: 50px;
+                line-height: 50px;
+                color: white;
+                transition: all .3s;
+                &:hover {
+                    background-color: rgba(0,0,0, .3);
+                    &::after {
+                        transform: rotate(-90deg);
+                        top: 22px;
+                    }
+                }
+            }
+            .slide-nav {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                padding: 10px 0;
+                background-color: @main_color;
+                z-index: 1;
+                display: none;
+                transition: all .3s;
+                li {
+                    width: 100%;
+                    float: left;
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding: 0 30px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+// end
+
+// banner
+main {
+    margin-top: 20px;
+    background-image: url(../images/23_brand_banner_pc.jpg);
+    .site-box {
+        display: block;
+        position: relative;
+        padding: 0 40px;
+        &:hover {
+            cursor: pointer;
+        }
+        .left,
+        .right {
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: rgba(0,0,0, .1);
+            font-size: 30px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: 200;
+            transition: all .3s;
+            &:hover {
+                background-color: rgba(0,0,0, .3);
+                color: @main_color;
+            }
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            right: 0;
+        }
+        .pagination {
+            position: absolute;
+            background-color: rgba(0,0,0, .1);
+            padding: 5px 30px;
+            margin: 0;
+            border-radius: 20px;
+            left: 50%;
+            bottom: 5%;
+            transform: translateX(-50%);
+            .current {
+                background-color: @main_color;
+            }
+            li {
+                float: left;
+                a {
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    background-color: white;
+                    padding: 0;
+                    border-radius: 50%;
+                }
+                &:not(:nth-child(1)) a {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+// end
+
+// 活动页面
+.scene {
+    .w();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 400px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    div {
+        width: 290px;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        &:not(:nth-child(1)) {
+            margin-left: 20px;
+        }
+    }
+    .middle,.small {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        >a {
+            display: block;
+            height: 170px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    }
+    .small {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div {
+            width: 100%;
+            height: 170px;
+            margin: 0;
+        }
+        .small-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            a {
+                border-radius: 20px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+// end
+
+// sec
+.sec {
+    .w;
+    height: 760px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    .sec-title {
+        height: 30px;
+        line-height: 30px;
+        a {
+            padding-right: 20px;
+            font-size: 30px;
+            border-right: 1px solid black;
+            color: black;
+            transition: all .3s;
+            &:hover {
+                color: @main_color;
+            }
+        }
+        span {
+            margin-left: 20px;
+        }
+    }
+    .commodity {
+        width: 100%;
+        height: 670px;
+        a {
+            float: left;
+            transition: all .3s;
+            color: white;
+            &:hover {
+                box-shadow: 0px 0px 20px 5px rgba(0,0,0, .3);
+                transform: translateY(-3px);
+            }
+        }
+        .commodity-big {
+            position: relative;;
+            display: block;
+            width: 280px;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            .tag {
+                width: 250px;
+                position: absolute;
+                padding: 15px;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 1px solid white;
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+        .commodity-box {
+            display: flex;
+            flex-flow: row wrap;
+            width: 884px;
+            height: 100%;
+            float: left;
+            margin-left: 22px;
+            justify-content: space-between;
+            align-content: space-between;
+            a {
+                box-sizing: border-box;
+                float: right;
+                width: 206px;
+                height: 325px;
+                background-color: white;
+                border: 1px solid rgba(0,0,0, .1);
+                text-align: center;
+                span {
+                    display: block;
+                    width: 100%;
+                    height: 220px;
+                    overflow: hidden;
+                    margin: 0;
+                    img {
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 1s linear;
+                    }
+                }
+                &:hover {
+                    img {
+                        transform: scale(110%);
+                    }
+                    * {
+                        color: #ff734c;
+                    }
+                }
+                p{
+                    margin: 0!important;
+                    color: black;
+                    text-align: center;
+                    &.uname {
+                        .omit();
+                        padding: 10px 10px 0;
+                        font-size: 16px;
+                        margin-bottom: 5px!important;
+                    }
+                    &.my-label {
+                        display: inline;
+                        padding: 3px 10px;
+                        border: 1px solid #ff734c;
+                        border-radius: 14px;
+                        background-color: #fff0ec;
+                    }
+                    &.price {
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin-top: 10px!important;
+                    }
+                }
+            }
+        }
+    }
+}
+// end

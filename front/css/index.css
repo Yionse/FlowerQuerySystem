@@ -1,0 +1,467 @@
+body {
+  background-color: #f5f5f5;
+}
+/*
+    关键代码
+    当文本的长度，超过盒子的最大宽度时，需要显示省略号
+    使用与所有的Html元素
+*/
+button {
+  outline: none!important;
+}
+a:hover {
+  text-decoration: none;
+}
+.site-header {
+  width: 100%;
+  height: 100px;
+  border-bottom: 5px solid #ccc;
+}
+.site-header .continar {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+}
+.site-header .continar > a {
+  display: block;
+  width: 250px;
+  height: 80px;
+  float: left;
+  margin-top: 10px;
+}
+.site-header .continar > a img {
+  width: 100%;
+  height: 100%;
+}
+.site-header .continar .row {
+  height: 100px;
+  width: 700px;
+  float: left;
+  margin: 0;
+  padding-left: 30px;
+}
+.site-header .continar .row .input-group .form-control:first-child {
+  height: 60px;
+  width: 450px;
+  border-radius: 50px 0 0 50px;
+  margin-top: 20px;
+  padding-left: 30px;
+  border-color: #ff4419;
+}
+.site-header .continar .row .input-group-btn:last-child > .btn {
+  height: 60px;
+  margin-top: 20px;
+  width: 120px;
+  border-radius: 0 50px 50px 0;
+  transition: background-color 0.3s;
+  font-size: 18px;
+  border-color: #ff4419;
+}
+.site-header .continar .row .input-group-btn:last-child > .btn:hover {
+  background-color: #ff4419;
+  color: white;
+}
+.site-header .continar .log,
+.site-header .continar .success {
+  position: relative;
+  float: left;
+  height: 100px;
+  width: 276px;
+  line-height: 100px;
+  font-size: 20px;
+  text-align: center;
+}
+.site-header .continar .log a {
+  padding: 10px 20px;
+  color: black;
+  transition: border-bottom 0.3s;
+}
+.site-header .continar .log a:hover {
+  border-bottom: 3px solid #ff4419;
+  color: #ff4419;
+}
+.site-header .continar .success p,
+.site-header .continar .success a {
+  float: left;
+}
+.site-header .continar .success .quit {
+  display: none;
+  width: 150px;
+  position: absolute;
+  background-color: white;
+  bottom: -67px;
+  border: 1px solid #ccc;
+}
+.site-header .continar .success .quit a {
+  text-decoration: none;
+  display: block;
+  line-height: 30px;
+  width: 100%;
+  padding: 0 20px;
+  border-bottom: 1px solid white;
+}
+.site-header .continar .success .quit a:hover {
+  border-bottom: 1px solid black;
+}
+.site-header .continar .success .username {
+  position: relative;
+  height: 95px;
+  width: 150px;
+  color: #ff4419;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: ackground-color 0.3s;
+}
+.site-header .continar .success .username::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 45px;
+  width: 0;
+  border: 7px solid white;
+  border-color: transparent #ff4419 transparent transparent;
+  transition: all 0.3s;
+}
+.site-header .continar .success .username:hover {
+  background-color: #ff4419;
+  color: white;
+}
+.site-header .continar .success .username:hover::after {
+  border-color: transparent white transparent transparent;
+  transform: rotate(-90deg);
+  top: 50px;
+}
+.site-header .continar .success .username .fs {
+  font-size: 26px;
+}
+.site-header .continar .success a.car {
+  height: 95px;
+  width: 126px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding-left: 2px;
+  color: black;
+  transition: background-color 0.3s;
+}
+.site-header .continar .success a.car .icontfont {
+  font-size: 22px!important;
+}
+.site-header .continar .success a.car .fs {
+  font-size: 26px;
+}
+.site-header .continar .success a.car:hover {
+  background-color: #ff4419;
+  color: white;
+}
+.site-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #ff4419;
+}
+.site-nav .nav {
+  width: 1226px;
+  margin: 0 auto;
+  height: 50px;
+}
+.site-nav .nav > li {
+  float: left;
+}
+.site-nav .nav > li.more:hover .slide-nav {
+  display: block;
+}
+.site-nav .nav > li.more > a::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  width: 0;
+  border: 7px solid white;
+  border-color: transparent white transparent transparent;
+  transition: all 0.3s;
+}
+.site-nav .nav > li a {
+  position: relative;
+  display: block;
+  padding: 0 40px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  transition: all 0.3s;
+}
+.site-nav .nav > li a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.site-nav .nav > li a:hover::after {
+  transform: rotate(-90deg);
+  top: 22px;
+}
+.site-nav .nav > li .slide-nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 10px 0;
+  background-color: #ff4419;
+  z-index: 1;
+  display: none;
+  transition: all 0.3s;
+}
+.site-nav .nav > li .slide-nav li {
+  width: 100%;
+  float: left;
+}
+.site-nav .nav > li .slide-nav li a {
+  display: block;
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+}
+main {
+  margin-top: 20px;
+  background-image: url(../images/23_brand_banner_pc.jpg);
+}
+main .site-box {
+  display: block;
+  position: relative;
+  padding: 0 40px;
+}
+main .site-box:hover {
+  cursor: pointer;
+}
+main .site-box .left,
+main .site-box .right {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 30px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: 200;
+  transition: all 0.3s;
+}
+main .site-box .left:hover,
+main .site-box .right:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ff4419;
+}
+main .site-box .left {
+  left: 0;
+}
+main .site-box .right {
+  right: 0;
+}
+main .site-box .pagination {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 30px;
+  margin: 0;
+  border-radius: 20px;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+main .site-box .pagination .current {
+  background-color: #ff4419;
+}
+main .site-box .pagination li {
+  float: left;
+}
+main .site-box .pagination li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  padding: 0;
+  border-radius: 50%;
+}
+main .site-box .pagination li:not(:nth-child(1)) a {
+  margin-left: 5px;
+}
+.scene {
+  width: 1226px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 400px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.scene img {
+  width: 100%;
+  height: 100%;
+}
+.scene div {
+  width: 290px;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.scene div:not(:nth-child(1)) {
+  margin-left: 20px;
+}
+.scene .middle,
+.scene .small {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scene .middle > a,
+.scene .small > a {
+  display: block;
+  height: 170px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.scene .small {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scene .small div {
+  width: 100%;
+  height: 170px;
+  margin: 0;
+}
+.scene .small .small-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.scene .small .small-box a {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.sec {
+  width: 1226px;
+  margin: 0 auto;
+  height: 760px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.sec .sec-title {
+  height: 30px;
+  line-height: 30px;
+}
+.sec .sec-title a {
+  padding-right: 20px;
+  font-size: 30px;
+  border-right: 1px solid black;
+  color: black;
+  transition: all 0.3s;
+}
+.sec .sec-title a:hover {
+  color: #ff4419;
+}
+.sec .sec-title span {
+  margin-left: 20px;
+}
+.sec .commodity {
+  width: 100%;
+  height: 670px;
+}
+.sec .commodity a {
+  float: left;
+  transition: all 0.3s;
+  color: white;
+}
+.sec .commodity a:hover {
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+.sec .commodity .commodity-big {
+  position: relative;
+  display: block;
+  width: 280px;
+  height: 100%;
+}
+.sec .commodity .commodity-big img {
+  width: 100%;
+  height: 100%;
+}
+.sec .commodity .commodity-big .tag {
+  width: 250px;
+  position: absolute;
+  padding: 15px;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid white;
+  font-size: 28px;
+  text-align: center;
+}
+.sec .commodity .commodity-box {
+  display: flex;
+  flex-flow: row wrap;
+  width: 884px;
+  height: 100%;
+  float: left;
+  margin-left: 22px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.sec .commodity .commodity-box a {
+  box-sizing: border-box;
+  float: right;
+  width: 206px;
+  height: 325px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.sec .commodity .commodity-box a span {
+  display: block;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  margin: 0;
+}
+.sec .commodity .commodity-box a span img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s linear;
+}
+.sec .commodity .commodity-box a:hover img {
+  transform: scale(110%);
+}
+.sec .commodity .commodity-box a:hover * {
+  color: #ff734c;
+}
+.sec .commodity .commodity-box a p {
+  margin: 0!important;
+  color: black;
+  text-align: center;
+}
+.sec .commodity .commodity-box a p.uname {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 10px 10px 0;
+  font-size: 16px;
+  margin-bottom: 5px!important;
+}
+.sec .commodity .commodity-box a p.my-label {
+  display: inline;
+  padding: 3px 10px;
+  border: 1px solid #ff734c;
+  border-radius: 14px;
+  background-color: #fff0ec;
+}
+.sec .commodity .commodity-box a p.price {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px!important;
+}

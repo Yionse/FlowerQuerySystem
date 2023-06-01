@@ -1,0 +1,103 @@
+.details {
+    width: 1226px;
+    margin: 50px auto 0;
+    background-color: white;
+    border-radius: 20px;
+    .details-img {
+        display: flex;
+        justify-content: space-between;
+        width: 1150px;
+        height: 500px;
+        margin: 20px auto;
+        .small {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            img {
+                width: 500px;
+                height: 500px;
+            }
+            .mask {
+                display: none;
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                background: rgba(0, 0, 0, .3);
+                left: 0;
+                top: 0;
+            }
+        }
+        .large {
+            position: absolute;
+            right: 284px;
+            width: 500px;
+            height: 500px;
+            background: url(../upload/flower/carnation/1.jpg) no-repeat;
+            background-size: 1000px 1000px;
+            display: none;
+        }
+        .text {
+            width: 600px;
+            height: 500px;
+            border-radius: 40px;
+            padding: 30px;
+            padding-top: 0;
+            h1 {
+                margin-bottom: 20px;
+            }
+            .tag {
+                display: inline;
+                padding: 3px 10px;
+                border: 1px solid #ff734c;
+                border-radius: 14px;
+                background-color: #fff0ec;
+            }
+            .price {
+                border-top: 1px solid #ccc;
+                margin-top: 20px;
+                padding-top: 10px;
+                .now {
+                    font-size: 24px;
+                    color:#ff734c;
+                    padding-right: 20px;
+                }
+                .old {
+                    text-decoration: line-through;
+                    color: rgba(0, 0, 0, .3);
+                }
+            }
+            .some {
+                padding: 20px;
+                border-radius: 10px;
+                background-color:  #fafafa;
+                margin-bottom: 20px;
+                p {
+                    line-height: 40px;
+                    margin: 0;
+                }
+            }
+            .add,
+            .buy {
+                background-color: #ff734c;
+                color: white;
+                padding: 20px 50px;
+                margin-left: 30px;
+            }
+            .add {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.panel-primary,
+.panel-warning,
+.panel-danger,
+.please{
+    position: absolute;
+    width: 300px;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}

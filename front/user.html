@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="icon" href="images/bitbug_favicon.ico">
+    <!-- 引入css样式 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+
+<body>
+    <div class="continar">
+        <ul class="left">
+            <li><a href="index.html" class="">首页</a></li>
+            <li><a href="javascript:;" class="current" data-index="1">个人信息</a></li>
+            <li><a href="javascript:;" class="" data-index="2">购物车</a></li>
+            <li><a href="login.html" class="bay">退出登录</a></li>
+        </ul>
+        <div class="right  infor right-current">
+            <h1>个人信息</h1>
+            <div class="infor">
+                <p>
+                    <span>用户名：</span>
+                    <input type="text" value="" class="uname" disabled>
+                </p>
+                <p>
+                    <span>密码：</span>
+                    <input type="password" value="" class="pass" disabled>
+                </p>
+                <p>
+                    <span>电话：</span>
+                    <input type="text" value="" class="tel" disabled>
+                </p>
+                <p>
+                    <span>收货地址：</span>
+                    <input type="text" value="" class="address" disabled>
+                </p>
+                <p><button class="modify">修改</button>
+                    <button class="sub">确定</button>
+                </p>
+            </div>
+        </div>
+        <div class="right cart">
+            <h1>购物车</h1>
+            <table>
+            </table>
+        </div>
+    </div>
+    <script type="text/html" id="temp">
+        <tr>
+            <td><img src="{{f_src}}" alt=""></td>
+            <td><span class="title">{{f_title}}</span></td>
+            <td><span class="price">{{price}}元</span></td>
+            <td><a href="javascript:;"id="{{c_id}}" class="iconfont">&#xeafb;删除</a></td>
+        </tr>
+    </script>
+    <script src="js/template-web.js"></script>
+    <script src="jQuery/JQuery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/user.js"></script>
+</body>
+
+</html>

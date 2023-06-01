@@ -1,0 +1,47 @@
+body {
+  background-color: #222831;
+}
+.left,
+.right {
+  background-color: #393e46 !important;
+}
+.left h1,
+.right h1 {
+  color: white;
+}
+.left table,
+.right table {
+  padding-bottom: 20px;
+}
+.left thead tr,
+.right thead tr {
+  border-bottom: 3px solid white!important;
+  font-size: 20px;
+}
+.left thead tr:hover,
+.right thead tr:hover {
+  background: none!important;
+}
+.left tr,
+.right tr,
+.left td,
+.right td {
+  height: 70px!important;
+  line-height: 70px!important;
+}
+.left td input,
+.right td input {
+  outline: none;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  width: 60%;
+  padding-left: 30px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.left td input:hover,
+.right td input:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 3px rgba(112, 243, 255, 0.3);
+}

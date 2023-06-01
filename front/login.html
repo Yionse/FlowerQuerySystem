@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="icon" href="images/bitbug_favicon.ico">
+    <!-- 引入样式初始化的css -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- 引入首页的css -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 引入bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- 导入字体图标 -->
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <!-- 引入自己的css -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- 引入首页中的重复代码 -->
+    <header class="site-header">
+        <!-- 版心 -->
+        <header class="continar w">
+            <!-- logo -->
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+            <!-- 引入bootstrap中的搜索框面板 -->
+            <!-- search -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default search" type="button">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </header>
+    <!-- end -->
+
+    <!-- 核心代码 -->
+    <main>
+        <div class="site-box">
+            <div class="login">
+                <!-- 登录框相关 -->
+                <div id="wrapper" class="login-page">
+                    <div id="login_form" class="form">
+                        <!-- registerform和loginform只有一个可以显示，互相切换 -->
+                        <form class="register-form" autocomplete="off">
+                            <input type="text" placeholder="用户名" id="r_user_name" />
+                            <input type="password" placeholder="密码" id="r_password" />
+                            <input type="text" placeholder="电话" id="r_tel" />
+                            <input type="text" placeholder="家庭住址" id="r_local" />
+                            <button id="create">创建账户</button>
+                            <p class="message">已经有了一个账户? <a href="javascript:;">立刻登录</a></p>
+                        </form>
+                        <!-- 登录页面 -->
+                        <form class="login-form" autocomplete="off">
+                            <input type="text" placeholder="用户名" id="user_name" />
+                            <input type="password" placeholder="密码" id="password" />
+                            <button id="login">登&nbsp;&nbsp;&nbsp;录</button>
+                            <p class="message">还没有账户? <a href="JavaScript:;">立刻创建</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 引入jQuery -->
+    <script src="jQuery/JQuery.min.js"></script>
+    <!-- 引入公共js -->
+    <script src="js/common.js"></script>
+    <!-- 引入自己私有的js -->
+    <script src="js/login.js"></script>
+</body>
+
+</html>
