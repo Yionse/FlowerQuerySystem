@@ -3,7 +3,7 @@ function token() {
     return new Promise((resolve, reject) => {
         $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1/token/token',
+            url: 'http://120.26.171.166:7009/token/token',
             headers: {
                 // token数据只能在请求头中，通过Authorization的值发送
                 'authorization': localStorage.getItem('final_login_token')
@@ -47,7 +47,7 @@ function ajax_my(url, key, flag='0') {
         // 发送Ajax请求
         $.ajax({
             type: 'GET',
-            url: `http://127.0.0.1/${url}?key=${key}&flag=${flag}`,
+            url: `http://120.26.171.166:7009/${url}?key=${key}&flag=${flag}`,
             success: data => {
                 if (data.statu === 200) {
                     // 查询成功

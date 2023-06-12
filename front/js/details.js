@@ -108,7 +108,7 @@ $('.add').click(() => {
         // 当前是登录状态
         $.ajax({
             type: 'GET',
-            url: `http://127.0.0.1/user/shopcar?u_id=${userId}&f_id=${f_id}&f_title=${title}&f_src=${src}&price=${activityPrice}`,
+            url: `http://120.26.171.166:7009/user/shopcar?u_id=${userId}&f_id=${f_id}&f_title=${title}&f_src=${src}&price=${activityPrice}`,
             success: (data) => {
                 if (data.statu === 200) {
                     // 加入成功，调用动画

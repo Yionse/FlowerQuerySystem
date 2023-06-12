@@ -34,7 +34,7 @@ const id = decodeURIComponent(getParamsByUrl(location.href, "id"));
 let req = new Promise((resolve, reject) => {
     $.ajax({
         type: 'GET',
-        url: 'http://127.0.0.1/user/infor?id='+id,
+        url: 'http://120.26.171.166:7009/user/infor?id='+id,
         success: (data) => {
             resolve(data);
         }
@@ -83,7 +83,7 @@ $('.sub').click(() => {
     // 则可以修改了，提交请求，修改数据库
     $.ajax({
         type: 'POST',
-        url: 'http://127.0.0.1/user/modify',
+        url: 'http://120.26.171.166:7009/user/modify',
         data: {
             id,
             u_name: $('.uname').val(),
@@ -105,7 +105,7 @@ function s() {
     let s = new Promise((resolve, reject) => {
         $.ajax({
             type: 'GET',
-            url: 'http://127.0.0.1/user/shop?u_id=' + id,
+            url: 'http://120.26.171.166:7009/user/shop?u_id=' + id,
             success: (data) => {
                 resolve(data);
             }
@@ -124,7 +124,7 @@ $('table').on('click', function(e) {
         const c_id = e.target.id;
         $.ajax({
             type: 'GET',
-            url: 'http://127.0.0.1/user/delete?c_id=' + c_id,
+            url: 'http://120.26.171.166:7009/user/delete?c_id=' + c_id,
             success: (data) => {
                 if (data.statu == 200) {
                     s();

@@ -4,7 +4,7 @@ function check_login() {
     const pass = $("#password").val();
     $.ajax({
         type: 'POST',           //  请求的方式
-        url: 'http://127.0.0.1/public/login',     //  请求的url，服务器在本地主机上
+        url: 'http://120.26.171.166:7009/public/login',     //  请求的url，服务器在本地主机上
         data: {         //  发送过去的数据
             user,
             pass
@@ -48,7 +48,7 @@ function check_register() {
         // 发送Ajax请求，步骤同登录函数，这里不再说明
         $.ajax({
             type: 'POST',
-            url: 'http://127.0.0.1/public/register',
+            url: 'http://120.26.171.166:7009/public/register',
             data: {
                 user,
                 pass,

@@ -27,7 +27,7 @@ function s() {
     const user = new Promise((resolve, reject) => {
         $.ajax({
             type: 'GET',
-            url: 'http://127.0.0.1/back/get',
+            url: 'http://120.26.171.166:7009/back/get',
             success: (data) => {
                 resolve(data);
             },
@@ -51,7 +51,7 @@ $('.user-infor').on('click', function(e) {
         const u_id = e.target.id;
         $.ajax({
             type: 'GET',
-            url: 'http://127.0.0.1/back/delete?u_id=' + u_id,
+            url: 'http://120.26.171.166:7009/back/delete?u_id=' + u_id,
             success: (data) => {
                 if (data.statu == 200) {
                     s();
