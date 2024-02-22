@@ -1,231 +1,246 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鲜花网|花礼网-鲜花礼品网,领先鲜花速递网站,网上订花送花上门,同城鲜花快递网上花店</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      鲜花网|花礼网-鲜花礼品网,领先鲜花速递网站,网上订花送花上门,同城鲜花快递网上花店
+    </title>
     <!-- 设置网站的icon -->
-    <link rel="icon" href="images/bitbug_favicon.ico">
+    <link rel="icon" href="images/bitbug_favicon.ico" />
     <!-- 引入初始化的css样式 -->
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="normalize.css" />
     <!-- 引入bootstrap的css样式 -->
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
     <!-- 引入字体图标 -->
-    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css" />
     <!-- 引入需要的样式 -->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css" />
     <!-- 引入自己的css样式 -->
-    <link rel="stylesheet" href="css/index.css">
-</head>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
 
-<body>
+  <body>
     <!-- header start -->
     <header class="site-header">
-        <!-- 版心 -->
-        <header class="continar w">
-            <!-- logo -->
-            <a href="javascript:;">
-                <img src="images/logo.png" alt="">
-            </a>
-            <!-- 引入bootstrap中的搜索框面板 -->
-            <!-- search -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for..." >
-                        <span class="input-group-btn">
-                            <button class="btn btn-default search" type="button">搜索</button>
-                        </span>
-                    </div>
-                </div>
+      <!-- 版心 -->
+      <header class="continar w">
+        <!-- logo -->
+        <a href="javascript:;">
+          <img src="images/logo.png" alt="" />
+        </a>
+        <!-- 引入bootstrap中的搜索框面板 -->
+        <!-- search -->
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for..."
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default search" type="button">
+                  搜索
+                </button>
+              </span>
             </div>
-            <!-- 未登录时和登录成功时是相斥的，只能有一个显示，谁隐藏谁就添加hide类 -->
-            <!-- 未登录时-----显示登录按钮 -->
-            <div class="log">
-                <a href="login.html" class="login">登录</a>
-            </div>
-            <!-- 登录成功时----个人中心 -->
-            <div class="success hide">
-                <!-- 显示用户名，溢出时，显示点 -->
-                <a href="javascript:;" class="username" title="我的用户">
-                    <span class="iconfont fs">&#xe651;</span>
-                    <span class="name"></span>
-                </a>
-                <!-- 购物车要单独出来，会有过渡以及hover效果 -->
-                <a href="javascript:;" class="car">
-                    <span class="iconfont fs">&#xe70b;</span>
-                    <span href="" class="userShop">购物车</span>
-                </a>
-                <!-- 退出登录 -->
-                <ul class="quit">
-                    <li><a href="" class="userCenter">个人中心</a></li>
-                    <li><a href="login.html" class="deleteToken">退出登录</a></li>
-                </ul>
-            </div>
-        </header>
+          </div>
+        </div>
+        <!-- 未登录时和登录成功时是相斥的，只能有一个显示，谁隐藏谁就添加hide类 -->
+        <!-- 未登录时-----显示登录按钮 -->
+        <div class="log">
+          <a href="login.html" class="login">登录</a>
+        </div>
+        <!-- 登录成功时----个人中心 -->
+        <div class="success hide">
+          <!-- 显示用户名，溢出时，显示点 -->
+          <a href="javascript:;" class="username" title="我的用户">
+            <span class="iconfont fs">&#xe651;</span>
+            <span class="name"></span>
+          </a>
+          <!-- 购物车要单独出来，会有过渡以及hover效果 -->
+          <a href="javascript:;" class="car">
+            <span class="iconfont fs">&#xe70b;</span>
+            <span href="" class="userShop">购物车</span>
+          </a>
+          <!-- 退出登录 -->
+          <ul class="quit">
+            <li><a href="" class="userCenter">个人中心</a></li>
+            <li><a href="login.html" class="deleteToken">退出登录</a></li>
+          </ul>
+        </div>
+      </header>
     </header>
     <!-- header end -->
 
     <!-- nav  start -->
     <nav class="site-nav">
-        <ul class="nav">
-            <li class="more"><a href="javascirpt:;">花花</a>
-                <ul class="slide-nav">
-                    <li><a href="list.html?url=public/type&key=玫瑰">玫瑰</a></li>
-                    <li><a href="list.html?url=public/type&key=康乃馨">康乃馨</a></li>
-                    <li><a href="list.html?url=public/type&key=向日葵">向日葵</a></li>
-                </ul>
+      <ul class="nav">
+        <li class="more">
+          <a href="javascirpt:;">花花</a>
+          <ul class="slide-nav">
+            <li><a href="list.html?url=public/type&key=玫瑰">玫瑰</a></li>
+            <li><a href="list.html?url=public/type&key=康乃馨">康乃馨</a></li>
+            <li><a href="list.html?url=public/type&key=向日葵">向日葵</a></li>
+          </ul>
+        </li>
+        <li class="more">
+          <a href="javascirpt:;">用途</a>
+          <ul class="slide-nav">
+            <li><a href="list.html?url=public/purpose&key=友情">送朋友</a></li>
+            <li><a href="list.html?url=public/purpose&key=爱情">送爱人</a></li>
+            <li><a href="list.html?url=public/purpose&key=婚庆">婚庆用</a></li>
+            <li><a href="list.html?url=public/purpose&key=长辈">送长辈</a></li>
+            <li><a href="list.html?url=public/purpose&key=生日">过生日</a></li>
+            <li><a href="list.html?url=public/purpose&key=商务">商务</a></li>
+            <li><a href="list.html?url=public/purpose&key=道歉">道歉</a></li>
+          </ul>
+        </li>
+        <li class="more">
+          <a href="javascirpt:;">包装</a>
+          <ul class="slide-nav">
+            <li>
+              <a href="list.html?url=public/packing&key=牛皮纸">牛皮纸</a>
             </li>
-            <li class="more"><a href="javascirpt:;">用途</a>
-                <ul class="slide-nav">
-                    <li><a href="list.html?url=public/purpose&key=友情">送朋友</a></li>
-                    <li><a href="list.html?url=public/purpose&key=爱情">送爱人</a></li>
-                    <li><a href="list.html?url=public/purpose&key=婚庆">婚庆用</a></li>
-                    <li><a href="list.html?url=public/purpose&key=长辈">送长辈</a></li>
-                    <li><a href="list.html?url=public/purpose&key=生日">过生日</a></li>
-                    <li><a href="list.html?url=public/purpose&key=商务">商务</a></li>
-                    <li><a href="list.html?url=public/purpose&key=道歉">道歉</a></li>
-                </ul>
+            <li>
+              <a href="list.html?url=public/packing&key=雾面纸">雾面纸</a>
             </li>
-            <li class="more"><a href="javascirpt:;">包装</a>
-                <ul class="slide-nav">
-                    <li><a href="list.html?url=public/packing&key=牛皮纸">牛皮纸</a></li>
-                    <li><a href="list.html?url=public/packing&key=雾面纸">雾面纸</a></li>
-                    <li><a href="list.html?url=public/packing&key=韩素纸">韩素纸</a></li>
-                    <li><a href="list.html?url=public/packing&key=玻璃纸">玻璃纸</a></li>
-                    <li><a href="list.html?url=public/packing&key=网纱">网纱</a></li>
-                    <li><a href="list.html?url=public/packing&key=巴黎纸">巴黎纸</a></li>
-                    <li><a href="list.html?url=public/packing&key=圆舞曲">麻叶</a></li>
-                    <li><a href="list.html?url=public/packing&key=麻麻叶">麻麻叶</a></li>
-                </ul>
+            <li>
+              <a href="list.html?url=public/packing&key=韩素纸">韩素纸</a>
             </li>
-            <li><a href="list.html?url=public/type&key=花篮">花篮</a></li>
-            <li><a href="list.html?url=public/type&key=礼盒">礼盒</a></li>
-            <li><a href="list.html?url=public/type&key=绿植">绿植</a></li>
-            <li><a href="list.html?url=public/type&key=永生花">永生花</a></li>
-            <li><a href="list.html?url=public/all&key=">全部</a></li>
-        </ul>
+            <li>
+              <a href="list.html?url=public/packing&key=玻璃纸">玻璃纸</a>
+            </li>
+            <li><a href="list.html?url=public/packing&key=网纱">网纱</a></li>
+            <li>
+              <a href="list.html?url=public/packing&key=巴黎纸">巴黎纸</a>
+            </li>
+            <li><a href="list.html?url=public/packing&key=圆舞曲">麻叶</a></li>
+            <li>
+              <a href="list.html?url=public/packing&key=麻麻叶">麻麻叶</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="list.html?url=public/type&key=花篮">花篮</a></li>
+        <li><a href="list.html?url=public/type&key=礼盒">礼盒</a></li>
+        <li><a href="list.html?url=public/type&key=绿植">绿植</a></li>
+        <li><a href="list.html?url=public/type&key=永生花">永生花</a></li>
+        <li><a href="list.html?url=public/all&key=">全部</a></li>
+      </ul>
     </nav>
     <!-- nav  end -->
 
     <!-- banner -->
     <main>
-        <div class="site-box" data-url="public/all" data-key="">
-            <!-- 定义两个按钮 -->
-            <a href="javascript:;" class="left iconfont">&#xe660;</a>
-            <a href="javascript:;" class="right iconfont">&#xe65f;</a>
-            <ul class="pagination">
-                <li><a href="javascript:;" class="item current" data-index="0"></a></li>
-                <li><a href="javascript:;" class="item" data-index="1"></a></li>
-                <li><a href="javascript:;" class="item" data-index="2"></a></li>
-            </ul>
-        </div>
+      <div class="site-box" data-url="public/all" data-key="">
+        <!-- 定义两个按钮 -->
+        <a href="javascript:;" class="left iconfont">&#xe660;</a>
+        <a href="javascript:;" class="right iconfont">&#xe65f;</a>
+        <ul class="pagination">
+          <li>
+            <a href="javascript:;" class="item current" data-index="0"></a>
+          </li>
+          <li><a href="javascript:;" class="item" data-index="1"></a></li>
+          <li><a href="javascript:;" class="item" data-index="2"></a></li>
+        </ul>
+      </div>
     </main>
     <!-- banner end -->
 
     <!-- 活动页面 -->
     <section class="scene">
-        <div class="big">
-            <a href="list.html?url=public/purpose&key=爱情">
-                <img src="images/home_channel_lover.jpg" alt="">
-            </a>
+      <div class="big">
+        <a href="list.html?url=public/purpose&key=爱情">
+          <img src="images/home_channel_lover.jpg" alt="" />
+        </a>
+      </div>
+      <div class="middle">
+        <a href="list.html?url=public/purpose&key=友情">
+          <img src="images/home_channel_friend.jpg" alt="" />
+        </a>
+        <a href="list.html?url=public/purpose&key=长辈">
+          <img src="images/home_channel_elder2.jpg" alt="" />
+        </a>
+      </div>
+      <div class="big">
+        <a href="list.html?url=public/purpose&key=生日">
+          <img src="images/home_channel_birthday.jpg" alt="" />
+        </a>
+      </div>
+      <div class="small">
+        <div class="small-box">
+          <a href="list.html?url=public/purpose&key=爱情">
+            <img src="images/home_channel_express.jpg" alt="" />
+          </a>
+          <a href="list.html?url=public/purpose&key=商务">
+            <img src="images/home_channel_business.png" alt="" />
+          </a>
         </div>
-        <div class="middle">
-            <a href="list.html?url=public/purpose&key=友情">
-                <img src="images/home_channel_friend.jpg" alt="">
-            </a>
-            <a href="list.html?url=public/purpose&key=长辈">
-                <img src="images/home_channel_elder2.jpg" alt="">
-            </a>
+        <div>
+          <a href="list.html?url=public/all&key=">
+            <img src="images/home_channel_you_3.jpg" alt="" />
+          </a>
         </div>
-        <div class="big">
-            <a href="list.html?url=public/purpose&key=生日">
-                <img src="images/home_channel_birthday.jpg" alt="">
-            </a>
-        </div>
-        <div class="small">
-            <div class="small-box">
-                <a href="list.html?url=public/purpose&key=爱情">
-                    <img src="images/home_channel_express.jpg" alt="">
-                </a>
-                <a href="list.html?url=public/purpose&key=商务">
-                    <img src="images/home_channel_business.png" alt="">
-                </a>
-            </div>
-            <div>
-                <a href="list.html?url=public/all&key=">
-                    <img src="images/home_channel_you_3.jpg" alt="">
-                </a>
-            </div>
-        </div>
+      </div>
     </section>
     <!--  end  -->
 
     <!-- love-flower -->
     <section class="sec">
-        <!-- 标题部分 -->
-        <h4 class="sec-title">
-            <a href="javascript">爱情鲜花</a>
-            <span>送&nbsp;·&nbsp;让你怦然心动的人</span>
-        </h4>
-        <!-- 商品部分 -->
-        <div class="commodity clearfix">
-            <a href="javascript:;" class="commodity-big">
-                <img src="images/love.png" alt="">
-                <div class="tag">
-                    爱情鲜花专区
-                </div>
-            </a>
-            <!-- 商品的具体显示 -->
-            <section class="commodity-box commodity-box-love">
-            </section>
-        </div>
+      <!-- 标题部分 -->
+      <h4 class="sec-title">
+        <a href="javascript">爱情鲜花</a>
+        <span>送&nbsp;·&nbsp;让你怦然心动的人</span>
+      </h4>
+      <!-- 商品部分 -->
+      <div class="commodity clearfix">
+        <a href="javascript:;" class="commodity-big">
+          <img src="images/love.png" alt="" />
+          <div class="tag">爱情鲜花专区</div>
+        </a>
+        <!-- 商品的具体显示 -->
+        <section class="commodity-box commodity-box-love"></section>
+      </div>
     </section>
     <!-- love-flower end -->
 
     <!-- parent-flower -->
     <section class="sec">
-        <!-- 标题部分 -->
-        <h4 class="sec-title">
-            <a href="javascript">送长辈鲜花</a>
-            <span>赠&nbsp;·&nbsp;父母/恩师/长辈</span>
-        </h4>
-        <!-- 商品部分 -->
-        <div class="commodity clearfix">
-            <a href="javascript:;" class="commodity-big">
-                <img src="images/parent.png" alt="">
-                <div class="tag">
-                    送长辈鲜花专区
-                </div>
-            </a>
-            <!-- 商品的具体显示 -->
-            <section class="commodity-box commodity-box-parent">
-            </section>
-        </div>
+      <!-- 标题部分 -->
+      <h4 class="sec-title">
+        <a href="javascript">送长辈鲜花</a>
+        <span>赠&nbsp;·&nbsp;父母/恩师/长辈</span>
+      </h4>
+      <!-- 商品部分 -->
+      <div class="commodity clearfix">
+        <a href="javascript:;" class="commodity-big">
+          <img src="images/parent.png" alt="" />
+          <div class="tag">送长辈鲜花专区</div>
+        </a>
+        <!-- 商品的具体显示 -->
+        <section class="commodity-box commodity-box-parent"></section>
+      </div>
     </section>
     <!-- parent-flower end -->
 
     <!-- forever-flower -->
     <section class="sec">
-        <!-- 标题部分 -->
-        <h4 class="sec-title">
-            <a href="javascript">永生花</a>
-            <span>许&nbsp;·&nbsp;她一生承诺</span>
-        </h4>
-        <!-- 商品部分 -->
-        <div class="commodity clearfix">
-            <a href="javascript:;" class="commodity-big">
-                <img src="images/forever.jpg" alt="">
-                <div class="tag">
-                    永生花专区
-                </div>
-            </a>
-            <!-- 商品的具体显示 -->
-            <section class="commodity-box commodity-box-forever">
-            </section>
-        </div>
+      <!-- 标题部分 -->
+      <h4 class="sec-title">
+        <a href="javascript">永生花</a>
+        <span>许&nbsp;·&nbsp;她一生承诺</span>
+      </h4>
+      <!-- 商品部分 -->
+      <div class="commodity clearfix">
+        <a href="javascript:;" class="commodity-big">
+          <img src="images/forever.jpg" alt="" />
+          <div class="tag">永生花专区</div>
+        </a>
+        <!-- 商品的具体显示 -->
+        <section class="commodity-box commodity-box-forever"></section>
+      </div>
     </section>
     <!-- forever-flower end -->
 
@@ -235,20 +250,21 @@
     <script src="js/template-web.js"></script>
 
     <!-- 设置模板 -->
-    <script id='temp' type="text/html">
-        <a href="details.html?f_id={{f_id}}&f_language={{f_language}}&f_material={{f_material}}&f_packing={{f_packing}}&f_src={{f_src}}&f_title={{f_title}}&f_tag={{f_tag}}&p_activity_price={{p_activity_price}}&p_price={{p_price}}&s_count={{s_count}}">
-            <span>
-                <img src="{{f_src}}" alt="">
-            </span>
-            <p class="uname">{{prefix}}&nbsp;·&nbsp;{{f_title}}</p>
-            <p class="my-label">{{f_tag}}</p>
-            <p class="price">￥{{p_activity_price}}</p>
-        </a>
+    <script id="temp" type="text/html">
+      <a
+        href="details.html?f_id={{f_id}}&f_language={{f_language}}&f_material={{f_material}}&f_packing={{f_packing}}&f_src={{f_src}}&f_title={{f_title}}&f_tag={{f_tag}}&p_activity_price={{p_activity_price}}&p_price={{p_price}}&s_count={{s_count}}"
+      >
+        <span>
+          <img src="{{f_src}}" alt="" />
+        </span>
+        <p class="uname">{{prefix}}&nbsp;·&nbsp;{{f_title}}</p>
+        <p class="my-label">{{f_tag}}</p>
+        <p class="price">￥{{p_activity_price}}</p>
+      </a>
     </script>
     <!-- 引入公共方法 -->
     <script src="js/common.js"></script>
     <!-- 引入自己的js -->
     <script src="js/index.js"></script>
-</body>
-
+  </body>
 </html>
